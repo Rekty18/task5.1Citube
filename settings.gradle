@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        google()  // Google's Maven repository
+        gradlePluginPortal()  // Gradle Plugin Portal
+    }
+    plugins {
+        id 'com.google.gms.google-services' version '4.3.10' apply false  // Specifying version and setting apply false
+    }
+}
+
+// Add this block if not already present
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()  // Ensures that Google's Maven repository is included for all projects
+        mavenCentral()  // Maven Central as a fallback for other dependencies
+    }
+}
+
+rootProject.name = 'iTube'
+include ':app'
